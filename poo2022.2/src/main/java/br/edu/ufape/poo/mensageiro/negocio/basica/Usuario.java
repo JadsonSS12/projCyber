@@ -11,15 +11,17 @@ import br.edu.ufape.poo.mensageiro.negocio.basica.UsuarioInterface;
  */
 public class Usuario implements UsuarioInterface {
     private String nome;
-    private int Id;
+    private long Id;
     private float debito;
     private String maquina;
+    private String Email;
     
-    public void efetuarCadastro(String nome){
+    public Usuario(String nome, float debito, String maquina, String Email){
         this.nome = nome;
         this.Id = this.getId();
         this.debito = this.getDebito();
         this.maquina = this.getMaquina();
+        this.Email = Email;
     }
     
     public void escolherMaquina(String maquina, int tempo){
@@ -42,12 +44,12 @@ public class Usuario implements UsuarioInterface {
         this.nome = nome;
     }
 
-    public int getId() {
+    public long getId() {
         return Id;
     }
 
-    public void setId(int ID) {
-        this.Id = ID;
+    public void setId(long id2) {
+        this.Id = id2;
     }
 
     public float getDebito() {
@@ -94,6 +96,14 @@ public class Usuario implements UsuarioInterface {
 	public void encerrarSessao(MaquinaJogos tal) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public String getEmail() {
+		return Email;
+	}
+
+	public void setEmail(String email) {
+		Email = email;
 	}
 
   
