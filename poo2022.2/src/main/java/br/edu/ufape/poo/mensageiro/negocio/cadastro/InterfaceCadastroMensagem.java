@@ -20,7 +20,7 @@ public interface InterfaceCadastroMensagem {
 
 	List<Mensagem> listarMensagensRemente(Long id);
 
-	Mensagem salvarMensagem(Mensagem entity);
+	Mensagem salvarMensagem(Mensagem entity) throws AutoMensagemException;
 
 	void apagarMensagem(Mensagem entity);
 

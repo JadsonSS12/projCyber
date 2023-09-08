@@ -26,7 +26,7 @@ public class Recepcionista {
     }
     
     public void consultar(Usuario me){
-        System.out.println(me.getId() + me.getNome() + me.getDebito() +  me.getMaquina());
+        System.out.println( me.getNome() + me.getDebito() +  me.getMaquina());
         
       
     }

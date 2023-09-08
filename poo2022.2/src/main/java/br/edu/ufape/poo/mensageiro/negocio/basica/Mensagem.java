@@ -22,7 +22,7 @@
 		
 		@ManyToOne
 		private Usuario remetente;
-		
+		@ManyToOne
 		private Usuario destinatario;
 
 		public Usuario getDestinatario() {

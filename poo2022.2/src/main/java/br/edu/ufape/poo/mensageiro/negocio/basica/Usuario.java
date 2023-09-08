@@ -2,29 +2,51 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
+
 package br.edu.ufape.poo.mensageiro.negocio.basica;
+
+
 import br.edu.ufape.poo.mensageiro.negocio.basica.UsuarioInterface;
+import br.edu.ufape.poo.mensageiro.negocio.basica.*;
+import jakarta.persistence.Entity;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+
+
 
     /**
  *
  * @author Usuário
  */
-public class Usuario implements UsuarioInterface {
-    private String nome;
+
+
+
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Usuario implements UsuarioInterface {	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Id;
+	private String nome;
     private float debito;
     private String maquina;
     private String Email;
+   
+
     
-    public Usuario(String nome, float debito, String maquina, String Email){
-        this.nome = nome;
-        this.Id = this.getId();
-        this.debito = this.getDebito();
-        this.maquina = this.getMaquina();
-        this.Email = Email;
-    }
+
+   
     
-    public void escolherMaquina(String maquina, int tempo){
+    public Usuario(String string, float f, String email2, String string2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void escolherMaquina(String maquina, int tempo){
         
     }
     
